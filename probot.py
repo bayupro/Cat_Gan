@@ -148,7 +148,7 @@ wait = {
     "LeaveRoom":True,
     "AutoJoin":True,
     "Members":1,
-    "AutoCancel":True,
+    "AutoCancel":False,
     "AutoKick":True,
     "blacklist":{},
     "teman":{},
@@ -760,6 +760,16 @@ def bot(op):
                     trs = gs.translate(txt,'id')
                     cl.sendText(msg.to,trs)
                     print '[Command] Translate ID'
+                except:
+                    cl.sendText(msg.to,'Error.')
+
+            elif "/translate-jp " in msg.text:
+                txt = msg.text.replace("/translate-jp ","")
+                try:
+                    gs = goslate.Goslate()
+                    trs = gs.translate(txt,'ja')
+                    cl.sendText(msg.to,trs)
+                    print '[Command] Translate JP'
                 except:
                     cl.sendText(msg.to,'Error.')
 #---------------------------------------------------------
@@ -1931,12 +1941,12 @@ http://line.me/ti/p/~bintoro279
 		    cl.sendText(msg.to, "Tag manual bos jgn males!")
 #--------------------------CEK SIDER------------------------------
 
-            elif "setview" in msg.text:
+            elif "sider" in msg.text:
                 subprocess.Popen("echo '' > dataSeen/"+msg.to+".txt", shell=True, stdout=subprocess.PIPE)
                 cl.sendText(msg.to, "Checkpoint checked!")
                 print "@setview"
 
-            elif "viewseen" in msg.text:
+            elif "ciduk" in msg.text:
 	        lurkGroup = ""
 	        dataResult, timeSeen, contacts, userList, timelist, recheckData = [], [], [], [], [], []
                 with open('dataSeen/'+msg.to+'.txt','r') as rr:
