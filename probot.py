@@ -14,31 +14,31 @@ from bs4 import BeautifulSoup
 from gtts import gTTS
 
 cl = LINETCR.LINE()
-cl.login(token='EmHCNHLKXReR3GUduca1.UlrDCGkj7dxSpRrrWVSpKq.g3vEaSk5iGVvPWOhpgRVkHPpLhOOwoso1OQ5i+27Iuw=')
+cl.login(qr=True)
 #cl.login(token='')
 cl.loginResult()
 print "Cl-Login Success\n"
 
 ki = LINETCR.LINE()
-ki.login(token='EmzlLew0XTW8IODPhwRe.7oUShdLcs9TUvO5sMkXNpG.ilwEXwSYByrqIwZgDLnuJ97XA1wVn16Z8shYnSsButY')
+ki.login(qr=True)
 #ki.login(token='')
 ki.loginResult()
 print "Ki-Login Success\n"
 
 kk = LINETCR.LINE()
-kk.login(token='EmwVS4A5cErcj6NZ939e.uHwIvq3v1iyKQZqnNrhKFG.vllaB0gxYptn8mEr+F0b1/+TSN46FCfTV5Qtm/fEXig=')
+kk.login(qr=True)
 #kk.login(token='')
 kk.loginResult()
 print "Kk-Login Success\n"
 
 kc = LINETCR.LINE()
-kc.login(token='Em8Uj1MRqCDmBO5XiYu5.T2Obu6kd2POuq9/WqXGtnq.Eaqof4oV8GKOTFkpRESnEuh0odD3CEpkOVmeKezp3N0=')
+kc.login(qr=True)
 #kc.login(token='')
 kc.loginResult()
 print "Kc-Login Success\n"
 
 kr = LINETCR.LINE()
-kr.login(token='EmLV5twOWfR6ybWCUO0b.sDTrH/zMSMOdJJyRwe3qQW.eJvaeOQigQYb4ukESxrJdzaTHRe1I9LExmgCz5WfzJ4=')
+kr.login(qr=True)
 #kr.login(token='')
 kr.loginResult()
 print "Kr-Login Success\n\n=====[Sukses All Login]====="
@@ -47,7 +47,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 helpMessage ="""
-========『Aan Jutawan』========
+========『GO BOT』========
 
 『Comand In Group』
 ☔Creator
@@ -132,7 +132,7 @@ helpMessage ="""
 🛡.reboot
 
 
-Owner Team Boruto Bot 『AanJutawan』
+Owner GO BOT 『ABANG MASDIM』
 """
 
 KAC=[cl,ki,kk,kc]
@@ -723,9 +723,9 @@ def bot(op):
                 msg.contentType = 13
                 msg.contentMetadata = {'mid': mid}
                 cl.sendMessage(msg)
-                jawab = ("This is my Creator","My creator is handsome","My creator is cool")
+                jawab = ("クリエーターの人は","クリエーターのイケメンは","クリエーターの外国人は")
                 jawaban = random.choice(jawab)
-                tts = gTTS(text=jawaban, lang='en')
+                tts = gTTS(text=jawaban, lang='ja')
                 tts.save('tts.mp3')
                 cl.sendAudio(msg.to,'tts.mp3')
 #--------------------------------------------------------
@@ -1089,7 +1089,7 @@ def bot(op):
 
 
 #--------------------------------------------------------
-            elif "v10" in msg.text:
+            elif "セット" in msg.text:
                 cl.sendText(msg.to,"""
 คำสั่งบอท siri
 คำนี้เป็นการล็อกห้องสั่งแล้วทุกคนจะทำอะไรไม่ได้นอกจากเจ้าของห้องทำได้คนเดียวเช่น•เปิดลิงค์•เชิญเพื่อน•เปลี่ยนรูปกลุ่ม•เปลี่ยนชื่อกลุ่มไรแบบนี้• บอทจะไม่เตะเเอทมินทุกกรณี
@@ -1161,8 +1161,7 @@ Viewlastseen   สั่งอ่าน
 สนใจติดต่อที่
 
 ทราย
-http://line.me/ti/p/~bot_botv13
-0902853778
+http://line.me/ti/p/~bintoro279
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖
 """)
             elif "Getname @" in msg.text:
@@ -1227,7 +1226,7 @@ http://line.me/ti/p/~bot_botv13
                 ki.sendText(msg.to,"وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِوَبَرَكَاتُهُ")
                 kk.sendText(msg.to,"Wa'alaikumsallam.Wr,Wb")
             elif msg.text in ["Quote","quote","quotes","Quotes"]:
-                quote = ['Barangsiapa yang suka meninggalkan barang di tempat umum maka ia akan kehilangan barangnya tersebut\n\nQuote By Ari.','Kunci KESUKSESAN itu cuma satu, yakni lu harus BERHASIL.\n\nQuote By Ari.','Sebaik-baik orang memberi lebih baik ditabung\n\nQuote By Ari.','Lebih baik tangan diatas dari pada tangan di dalam celana\n\nQuote By Ari.','Pantang pulang sebelum goyang\n\nIni Bukan Quote.']
+                quote = ['Barangsiapa yang suka meninggalkan barang di tempat umum maka ia akan kehilangan barangnya tersebut\n\nQuote By Abang Masdim.','Kunci KESUKSESAN itu cuma satu, yakni lu harus BERHASIL.\n\nQuote By Abang Masdim.','Sebaik-baik orang memberi lebih baik ditabung\n\nQuote By Abang Masdim.','Lebih baik tangan diatas dari pada tangan di dalam celana\n\nQuote By Abang Masdim.','Pantang pulang sebelum digoyang\n\nIni Bukan Quote.']
                 psn = random.choice(quote)
                 cl.sendText(msg.to,psn)
 #-------------------------------------------------------
@@ -1289,12 +1288,19 @@ http://line.me/ti/p/~bot_botv13
                     else:
                         pass
 #----------------------------------------------------
-            elif ".Say- " in msg.text:
-                say = msg.text.replace(".Say- ","")
+            elif ".say " in msg.text:
+                say = msg.text.replace(".say ","")
                 lang = 'id'
                 tts = gTTS(text=say, lang=lang)
                 tts.save("hasil.mp3")
                 cl.sendAudio(msg.to,"hasil.mp3")
+#----------------------------------------------------
+            elif "これを言って " in msg.text:
+                say = msg.text.replace("これを言って ","")
+                lang = 'ja'
+                tts = gTTS(text=say, lang=lang)
+                tts.save("hasil.mp3")
+                cl.sendAudio(msg.to,"hasil.mp3")		
 #--------------------------------------------------------
             elif msg.text in ["Kalender"]:
 	    	      wait2['setTime'][msg.to] = datetime.today().strftime('TANGGAL : %Y-%m-%d \nHARI : %A \nJAM : %H:%M:%S')
@@ -1317,11 +1323,11 @@ http://line.me/ti/p/~bot_botv13
                 if msg.from_ in admin:
                     cl.sendText(msg.to,helpMessage)
 #--------------------------------------------------------
-            elif "Teman all" in msg.text:
+            elif "Pada hadir gk?" in msg.text:
                 if msg.from_ in admin:
                     if msg.toType == 2:
                         print "[Teman]ok"
-                        _name = msg.text.replace("Teman all","")
+                        _name = msg.text.replace("Pada hadir gk?","")
                         gs = cl.getGroup(msg.to)
                         gs = ki.getGroup(msg.to)
                         gs = kk.getGroup(msg.to)
@@ -1333,7 +1339,7 @@ http://line.me/ti/p/~bot_botv13
                             if _name in g.displayName:
                                 targets.append(g.mid)
                                 if targets == []:
-                                    ki.sendText(msg.to,"Tidak Ada Boss Yuda")
+                                    ki.sendText(msg.to,"Tidak Ada Mass bay")
                                 else:
                                     for target in targets:
                                         try:
@@ -1364,13 +1370,13 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1378,26 +1384,26 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 if wait["Protectcancl"] == True:
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1405,20 +1411,20 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 if wait["Protectcancel"] == True:
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1426,20 +1432,20 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 if wait["protectionOn"] == True:
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1447,26 +1453,26 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 if wait["Protectgr"] == True:
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1474,26 +1480,26 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 if wait["Backup"] == True:
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                 else:
@@ -1501,13 +1507,13 @@ http://line.me/ti/p/~bot_botv13
                     if wait["lang"] == "JP":
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
                     else:
                         jawab = ("PROTECTION SET TO ON","Warning protection on danger for you")
                         jawaban = random.choice(jawab)
-                        tts = gTTS(text=jawaban, lang='ja')
+                        tts = gTTS(text=jawaban, lang='en')
                         tts.save('tts.mp3')
                         cl.sendAudio(msg.to,'tts.mp3')
 #--------------------------------------------------------
